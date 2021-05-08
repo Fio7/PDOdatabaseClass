@@ -174,7 +174,7 @@ class Database{
 		/*eg
 		$vals['thiscol']='new value';			
 		$vals['thatcol']='other new value';			
-		$dbse->table='coupons';
+		$dbse->table='myStoredVals';
 		$dbse->vals=$vals;
 		$dbse->ids=array('couponid'=>$this_coupon);
 		$ret_arr=$dbse->update();
@@ -320,22 +320,25 @@ class Database{
 	
 	
 	function multi_insert($arr){
-		//$dbse->table='purchased_lessons';
-		//$arr[unique_keyA][col_name1]=$value1
-		//$arr[unique_keyA][col_name2]=$value2
-		//$arr[unique_keyB][col_name1]=$value1
-		//$arr[unique_keyB][col_name2]=$value2
-		/* eg
-		foreach($_SESSION['cart']['scheduleids'] as $scheduleid=>$num){
-			for($c=0;$c<$num;$c++){
-				$rows_to_insert[$i.$c]['transactionid']=$transactionid;
-				$rows_to_insert[$i.$c]['scheduleid']=$scheduleid;
-				$rows_to_insert[$i.$c]['first_name']=($i==1?$first_name[0]:'unknown');
-				$rows_to_insert[$i.$c]['email']=($i==1?$_POST['email']:'');
-				$rows_to_insert[$i.$c]['phone']=($i==1?$_POST['phone']:'');
-			}
-			$i++;	
-		}		
+		/**
+		* multi_insert($arr)
+		*
+		* $dbse->table='purchased_lessons';
+		* $arr[unique_keyA][col_name1]=$value1
+		* $arr[unique_keyA][col_name2]=$value2
+		* $arr[unique_keyB][col_name1]=$value1
+		* $arr[unique_keyB][col_name2]=$value2
+		* eg
+		* foreach($_SESSION['cart']['scheduleids'] as $scheduleid=>$num){
+		*	for($c=0;$c<$num;$c++){
+		*		$rows_to_insert[$i.$c]['transactionid']=$transactionid;
+		*		$rows_to_insert[$i.$c]['scheduleid']=$scheduleid;
+		*		$rows_to_insert[$i.$c]['first_name']=($i==1?$first_name[0]:'unknown');
+		*		$rows_to_insert[$i.$c]['email']=($i==1?$_POST['email']:'');
+		*		$rows_to_insert[$i.$c]['phone']=($i==1?$_POST['phone']:'');
+		*	}
+		*	$i++;	
+		* }			
 		*/
 		
 		//SQL bits.
