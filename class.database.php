@@ -20,8 +20,11 @@ class Database{
 	public function __destruct(){
 	}
 	public function query($sql){
-		//https://www.php.net/manual/en/pdo.query.php
-		//simply runs a given query without any parameters
+		/**
+		* Simply runs a given query without any parameters
+		* https://www.php.net/manual/en/pdo.query.php
+		* 
+		*/
 		$ret_arr=array();
 		try {
 			$stmt = $this->pdo->query($sql);
