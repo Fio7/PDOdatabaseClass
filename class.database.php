@@ -92,8 +92,10 @@ class Database{
 	}
 	
 	public function fetch(){
-		//returns a simple array for single result, and a multi for multiple
-		//if ids is empty it selects the entire table
+		/**
+		* Returns a simple array for single result, and a multi for multiple
+		* If ids is empty it selects the entire table
+		*/
 		
 		$ret_arr=array();
 		$sql="SELECT * FROM ".$this->table; 
