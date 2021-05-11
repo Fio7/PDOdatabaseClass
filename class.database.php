@@ -23,6 +23,7 @@ class Database{
 		/**
 		* Simply runs a given query without any parameters
 		* https://www.php.net/manual/en/pdo.query.php
+		* Care should be take to prevent SQL injection before this query is passed in
 		* 
 		*/
 		$ret_arr=array();
